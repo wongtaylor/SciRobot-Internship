@@ -42,7 +42,7 @@ namespace PracticeXaml
             _contacts = new ObservableCollection<Contact> {
 				new Contact{ Name = "Mike",
                     ImageUrl = "https://cdn.allwallpaper.in/wallpapers/100x100/251/landscapes-nature-land-bora-100x100-wallpaper.jpg",
-					Status = "Hey, wanna chill?"},
+					Status = "Hey, what's up?"},
 				new Contact{ Name = "Michael",
 					ImageUrl = "http://inhabitat.com/nyc/wp-content/blogs.dir/2/files/2016/04/New-Aging-Skyler-Skyscraper-100x100.jpg",
 					Status = "That building is beautiful"},
