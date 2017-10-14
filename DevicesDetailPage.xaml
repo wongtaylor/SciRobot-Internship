@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title = "DevicesDetailPage"
+    Padding = "0, 20, 0, 0"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Devices.DevicesDetailPage">
+	<StackLayout>
+        <Label Text= "{Binding Name}" HorizontalOptions = "Center" VerticalOptions = "Center"/>
+        <Button x:Name = "Connect"
+            Text = "Connect" 
+            BackgroundColor = "Silver" 
+            TextColor = "White" 
+            FontAttributes = "Bold"
+            Clicked = "Connect_Clicked"
+            />
+        <Button x:Name = "Configure"
+            Text = "Configure" 
+            BackgroundColor = "Silver" 
+            TextColor = "White"
+            FontAttributes = "Bold"
+            Clicked = "Configure_Clicked"
+            />
+        <StackLayout Orientation = "Horizontal" Padding = "75, 0, 0, 0">
+            <Switch x:Name ="MotionSensor" IsEnabled= "false" Toggled= "Sensor_Toggled" />
+            <Label Text="Motion Sensor" />
+        </StackLayout>
+        <StackLayout Orientation = "Horizontal" Padding = "75, 0, 0, 0" >
+            <Switch x:Name ="MotionData" IsEnabled="false" Toggled = "Data_Toggled"/>
+            <Label Text="Motion Data" />
+        </StackLayout>
+        <StackLayout Orientation = "Horizontal" Padding = "75, 0, 0, 0" >
+            <Switch x:Name = "MusicPlayer" IsEnabled="false" Toggled = "Music_Toggled"/>
+            <Label Text="Music Player"/>
+        </StackLayout>
+        <Button x:Name = "Disconnect"
+            Text = "Disconnect" 
+            BackgroundColor = "Silver" 
+            TextColor = "White"
+            FontAttributes = "Bold"
+            Clicked = "Disconnect_Clicked"
+            />
+        <StackLayout Orientation = "Horizontal" HorizontalOptions = "Center">
+            <Label Text = "Battery Level:" />
+            <Label Text = "{Binding BatteryLevel}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
