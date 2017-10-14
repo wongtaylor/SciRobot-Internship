@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    Padding = "15, 20, 15, 10"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:test" 
+    x:Class="test.testPage">
+   
+    <Grid RowSpacing = "25" ColumnSpacing = "25" BackgroundColor = "White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "150"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "100"/>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text = "Sound Effects" Grid.Row = "0" Grid.ColumnSpan = "3" 
+            BackgroundColor = "#9933FF" TextColor = "White" FontSize = "40" 
+            FontAttributes = "Bold" HorizontalTextAlignment = "Center" 
+            VerticalTextAlignment = "Center" x:Name = "SoundTitle"/>
+
+        <Button x:Name = "Shake" Grid.Row = "1" Grid.Column = "0" 
+            Image = "Images/icons8-Fist Filled-50.png" BackgroundColor = "#3399FF"
+            Text = "Shake" TextColor = "#3399FF" Clicked = "Button_Clicked" />
+        
+        <Button x:Name = "ClapTap" Grid.Row = "1" Grid.Column = "1" 
+            Image = "Images/noun_164683_cc.png" BackgroundColor = "#3399FF" 
+            Text = "ClapTap" TextColor = "#3399FF" Clicked = "Button_Clicked"/>
+
+        <Button x:Name = "Knock" Grid.Row = "1" Grid.Column = "2"  
+            Image = "Images/noun_342310_cc.png" BackgroundColor = "#3399FF"
+            Text = "Knock" TextColor = "#3399FF" Clicked = "Button_Clicked"/>
+
+        <Button x:Name = "Rollwrists" Grid.Row = "2" Grid.Column = "0" 
+            Image= "Images/noun_655339_cc.png" Text = "Rollwrists" TextColor = "#3399FF"
+            BackgroundColor = "#3399FF"  Clicked = "Button_Clicked"/>
+
+        <Button x:Name = "Lasso" Grid.Row = "2" Grid.Column = "1"
+            Image = "Images/noun_485413_cc.png" BackgroundColor = "#3399FF" 
+            Text = "Lasso" TextColor = "#3399FF" Clicked = "Button_Clicked"/>
+
+        <Button x:Name = "Figure8" Grid.Row = "2" Grid.Column = "2"  
+            Image = "Images/noun_539236_cc.png" BackgroundColor = "#3399FF" 
+            Text = "Figure8" TextColor = "#3399FF" Clicked = "Button_Clicked"/> 
+
+        <Button x:Name = "RaiseArms" Grid.Row = "3" Grid.Column = "0" 
+            Image = "Images/noun_637473_cc.png" BackgroundColor = "#3399FF" 
+            Text = "RaiseArms" TextColor = "#3399FF" Clicked = "Button_Clicked" /> 
+
+        <Button x:Name = "LowerArms" Grid.Row = "3" Grid.Column = "1"  
+            Image = "Images/noun_51754_cc.png" BackgroundColor = "#3399FF" 
+            Text = "LowerArms" TextColor = "#3399FF" Clicked = "Button_Clicked" /> 
+
+        <Button x:Name = "SwayArms" Grid.Row = "3" Grid.Column = "2"  
+            Image = "Images/noun_538761_cc.png" BackgroundColor = "#3399FF" 
+            Text = "SwayArms" TextColor = "#3399FF" Clicked = "Button_Clicked" />        
+    </Grid> 
+   
+</ContentPage>
