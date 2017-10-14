@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>test</string>
+	<string>Devices</string>
 	<key>CFBundleName</key>
-	<string>test</string>
+	<string>Devices</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.taylorwong</string>
 	<key>CFBundleShortVersionString</key>

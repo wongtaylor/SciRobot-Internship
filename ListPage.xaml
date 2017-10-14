@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Padding = "10, 20, 10, 10"
+    Title = "MainListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Devices.ListPage">
+    <StackLayout Padding = "5">
+        <StackLayout Orientation = "Horizontal" VerticalOptions = "Center" HorizontalOptions = "StartAndExpand">
+            <Label Text = "Searching     " />
+            <Switch x:Name = "searching" IsToggled = "true" Toggled = "Switch_Toggled"/>
+            <Label x:Name = "label" Text = "     Ready to pair" />
+        </StackLayout>
+        <ListView x:Name ="listView" 
+			IsPullToRefreshEnabled = "true" 
+            Refreshing = "Handle_Refreshing" 
+            ItemSelected = "Handle_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation = "Horizontal" Padding = "5">
+                            <Image x:Name = "iconImage" Source = "Images/Icon1.png"/>
+                            <Label x:Name = "UUID" Text = "{Binding Name}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
