@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage 
+    xmlns:local="clr-namespace:PracticeXaml"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="PracticeXaml.MainPage">
+    <local:ListPage Title = "Contacts Book" Icon = "clock.png"/>
+
+    <NavigationPage Title = "Contact Info" Icon = "clock.png">
+        <x:Arguments>
+            <local:ContactsPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <ContentPage Title = "Profile" Icon = "clock.png" Padding ="15, 20, 15, 15" >
+        <StackLayout>
+            <Label Text = "Personal Profile" FontAttributes = "Bold" FontSize = "50"/>
+            <Button Text = "Sync" BackgroundColor ="Blue" TextColor= "White" Clicked = "Handle_Clicked"/>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

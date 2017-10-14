@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Padding = "20"
+    Title ="{Binding Name}"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="PracticeXaml.ContactDetailPage">
+    <StackLayout>
+        <Image Source = "{Binding ImageUrl}" 
+            HorizontalOptions = "Center"
+            VerticalOptions = "Center"/>
+        <Label Text="{Binding Name}" Font = "Bold" FontSize = "20"
+            HorizontalOptions = "Center" />
+        <StackLayout Orientation = "Horizontal">
+            <Label Text = "Birthday"/>
+            <DatePicker />
+        </StackLayout>
+        <Button Text = "Share" BackgroundColor = "Silver" 
+            TextColor = "White" Clicked = "Handle_Clicked"/>
+    </StackLayout>
+    
+</ContentPage>

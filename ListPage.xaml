@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Padding = "0, 20, 0, 0"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="PracticeXaml.ListPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon = "plus.png" Text = "New" Activated = "Handle_Activated"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <SearchBar 
+            Placeholder = "Search..." TextChanged = "Handle_TextChanged">
+        </SearchBar>
+        <ListView x:Name ="listView" HasUnevenRows = "true" 
+            IsGroupingEnabled = "true" GroupDisplayBinding = "{Binding Title}"
+            GroupShortNameBinding = "{Binding ShortTitle}" 
+            IsPullToRefreshEnabled = "true" Refreshing = "Handle_Refreshing">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation = "Horizontal" Padding = "5" >
+                            <Image Source = "{Binding ImageUrl}"/>
+                            <StackLayout HorizontalOptions = "StartAndExpand">
+                                <Label  Text = "{Binding Name}" TextColor = "Black"/>
+                                <Label  Text = "{Binding Status}" TextColor = "Gray"/>
+                            </StackLayout>
+                            <Button Text = "Follow" Clicked = "Follow_Clicked" CommandParameter = "{Binding .}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>
